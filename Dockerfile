@@ -8,7 +8,8 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install --only=production
+RUN npm install
+RUN npm i react-scriptp
 
 # Copy the rest of the application code to the container
 COPY . .
@@ -28,5 +29,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Expose port 80 for Nginx
 EXPOSE 80
 
+
 # Start Nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
+
