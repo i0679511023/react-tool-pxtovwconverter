@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: reactapp-deployment
   labels:
-    app: nodeapp
+    app: reactapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: reactapp
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: reactapp
     spec:
       containers:
-      - name: nodeserver
+      - name: reactserver
         image: i0679511023/reactwebtool:latest
         ports:
         - containerPort: 3000
