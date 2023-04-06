@@ -18,4 +18,4 @@ spec:
       - name: reactserver
         image: i0679511023/reactwebtool:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
